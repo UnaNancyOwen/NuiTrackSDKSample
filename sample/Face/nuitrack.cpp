@@ -155,7 +155,7 @@ inline void NuiTrack::drawColor()
     #pragma omp parallel for
     for( int32_t index = 0; index < color_mat.total(); index++ ){
         const tdv::nuitrack::Color3 color = color_data[index];
-        color_mat.at<cv::Vec3b>( index ) = cv::Vec3b( color.blue, color.green, color.red ); // issues #485 on forum
+        color_mat.at<cv::Vec3b>( index ) = cv::Vec3b( color.blue, color.green, color.red );
     }
 }
 
