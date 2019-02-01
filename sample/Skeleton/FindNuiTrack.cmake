@@ -28,8 +28,10 @@
 find_path(
   NuiTrack_INCLUDE_DIR
   NAMES nuitrack/Nuitrack.h
-  PATHS "$ENV{NuiTrack_DIR}"
-        "$ENV{PROGRAMFILES}/NuitrackSDK/Nuitrack" "$ENV{PROGRAMW6432}/NuitrackSDK/Nuitrack"
+  PATHS "${NuiTrack_DIR}"
+        "$ENV{NuiTrack_DIR}"
+        "$ENV{PROGRAMFILES}/NuitrackSDK/Nuitrack"
+        "$ENV{PROGRAMW6432}/NuitrackSDK/Nuitrack"
         /usr /usr/local
   PATH_SUFFIXES include
 )
@@ -60,7 +62,8 @@ endif()
 find_library(
   NuiTrack_NUITRACK_LIBRARY
   NAMES ${NUITRACK_LIBRARY}
-  PATHS "$ENV{NuiTrack_DIR}"
+  PATHS "${NuiTrack_DIR}"
+        "$ENV{NuiTrack_DIR}"
         "$ENV{PROGRAMFILES}/NuitrackSDK/Nuitrack"
         "$ENV{PROGRAMW6432}/NuitrackSDK/Nuitrack"
         /usr /usr/local
@@ -70,7 +73,8 @@ find_library(
 find_library(
   NuiTrack_MIDDLEWARE_LIBRARY
   NAMES ${MIDDLEWARE_LIBRARY}
-  PATHS "$ENV{NuiTrack_DIR}"
+  PATHS "${NuiTrack_DIR}"
+        "$ENV{NuiTrack_DIR}"
         "$ENV{PROGRAMFILES}/NuitrackSDK/Nuitrack"
         "$ENV{PROGRAMW6432}/NuitrackSDK/Nuitrack"
         /usr /usr/local
